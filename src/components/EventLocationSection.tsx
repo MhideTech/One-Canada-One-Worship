@@ -19,7 +19,7 @@ const EventLocationSection = () => {
       icon: Calendar,
       title: "Event Dates",
       detail: "Sunday, September 21, 2025 ",
-      subtitle: "3:00 PM - 7:00 PM",
+      subtitle: "10:00 AM - 9:00 PM",
     },
     {
       icon: MapPin,

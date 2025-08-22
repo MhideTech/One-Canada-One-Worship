@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Heart, MapPin, Mail } from "lucide-react";
+import footerImage from "@/assets/footer.jpg";
+
 
 const Footer = () => {
   return (
@@ -14,11 +16,11 @@ const Footer = () => {
             className="space-y-4"
           >
             <h3 className="text-2xl font-heading font-bold mb-4">
-              Sacred Steps Church
+              One Canada, One Worship
             </h3>
             <p className="text-secondary-foreground/80 leading-relaxed">
-              A community built on faith, love, and hope. Join us as we take
-              sacred steps together in our journey of spiritual growth.
+              A community built on faith, love, and hope. Join us as we
+              fellowship together in our journey of spiritual growth.
             </p>
             <div className="flex items-center gap-2 text-secondary-foreground/60">
               <Heart className="w-4 h-4" />
@@ -44,7 +46,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-secondary-foreground/60" />
                 <div className="text-sm">info@onecanadaoneworship.com</div>
@@ -57,27 +59,8 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="space-y-4"
           >
-            <h4 className="text-lg font-semibold mb-4">Sunday Service</h4>
-            <div className="space-y-2 text-sm">
-              <div className="text-secondary-foreground/60">
-                Join us for our Sunday Service 
-              </div>
-              <div className="text-secondary-foreground/80">
-                March 15-17, 2024
-              </div>
-              <div className="text-secondary-foreground/60">
-                10800 Weston Road, Vaughan, ON L4L 8L3
-              </div>
-            </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-4 px-6 py-3 bg-secondary-foreground text-primary rounded-xs font-medium text-sm transition-colors hover:bg-white/90"
-            >
-              Register Now
-            </motion.button>
+            <img src={footerImage} alt="" />
           </motion.div>
         </div>
 
@@ -90,7 +73,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-secondary-foreground/60">
-              © 2025 Sacred Steps Church. All rights reserved.
+              © 2025 One Canada, One Worship. All rights reserved.
             </p>
           </div>
         </motion.div>

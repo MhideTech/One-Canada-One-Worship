@@ -1,7 +1,14 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Facebook, Instagram, Twitter, Youtube, Mail, ExternalLink } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube,
+  Mail,
+  ExternalLink,
+} from "lucide-react";
 
 const SocialMediaSection = () => {
   const ref = useRef(null);
@@ -15,6 +22,7 @@ const SocialMediaSection = () => {
       description: "Daily inspiration and community updates",
       color: "hover:text-blue-600",
       bgColor: "hover:bg-blue-600/10",
+      link: "https://web.facebook.com/miraclearenacanada",
     },
     {
       name: "Instagram",
@@ -23,15 +31,16 @@ const SocialMediaSection = () => {
       description: "Behind-the-scenes moments and celebrations",
       color: "hover:text-pink-600",
       bgColor: "hover:bg-pink-600/10",
+      link: "https://www.instagram.com/onecanadaoneworship/#",
     },
-    {
-      name: "Twitter",
-      icon: Twitter,
-      handle: "@sacredsteps",
-      description: "Quick updates and spiritual reflections",
-      color: "hover:text-blue-400",
-      bgColor: "hover:bg-blue-400/10",
-    },
+    // {
+    //   name: "Twitter",
+    //   icon: Twitter,
+    //   handle: "@sacredsteps",
+    //   description: "Quick updates and spiritual reflections",
+    //   color: "hover:text-blue-400",
+    //   bgColor: "hover:bg-blue-400/10",
+    // },
     {
       name: "YouTube",
       icon: Youtube,
@@ -39,6 +48,7 @@ const SocialMediaSection = () => {
       description: "Sermons, events, and worship experiences",
       color: "hover:text-red-600",
       bgColor: "hover:bg-red-600/10",
+      link: "https://www.youtube.com/@MiracleArenaCanada",
     },
   ];
 
@@ -61,11 +71,12 @@ const SocialMediaSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Follow us on social media for daily inspiration, event updates, and glimpses into our church family life.
+            Follow us on social media for daily inspiration, event updates, and
+            glimpses into our church family life.
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="w-9/12 mx-auto grid md:grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
           {socialLinks.map((social, index) => (
             <motion.div
               key={social.name}
@@ -75,22 +86,30 @@ const SocialMediaSection = () => {
               className={`group bg-card p-6 rounded-2xl shadow-soft border cursor-pointer transition-all duration-300 hover:shadow-elegant ${social.bgColor}`}
             >
               <div className="text-center">
-                <div className={`w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center transition-colors duration-300 ${social.bgColor}`}>
-                  <social.icon className={`w-8 h-8 text-primary transition-colors duration-300 ${social.color}`} />
+                <div
+                  className={`w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center transition-colors duration-300 ${social.bgColor}`}
+                >
+                  <social.icon
+                    className={`w-8 h-8 text-primary transition-colors duration-300 ${social.color}`}
+                  />
                 </div>
-                
+
                 <h3 className="font-semibold text-lg mb-2">{social.name}</h3>
-                <p className={`text-sm font-medium mb-2 transition-colors duration-300 ${social.color}`}>
+                <p
+                  className={`text-sm font-medium mb-2 transition-colors duration-300 ${social.color}`}
+                >
                   {social.handle}
                 </p>
                 <p className="text-sm text-muted-foreground mb-4">
                   {social.description}
                 </p>
-                
-                <div className="flex items-center justify-center gap-2 text-sm font-medium text-primary group-hover:text-current transition-colors">
-                  Follow Us
-                  <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </div>
+
+                <a href={social.link} target="_blank">
+                  <div className="flex items-center justify-center gap-2 text-sm font-medium text-primary group-hover:text-current transition-colors">
+                    Follow Us
+                    <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </div>
+                </a>
               </div>
             </motion.div>
           ))}

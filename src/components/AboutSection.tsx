@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Heart, Users, Lightbulb } from "lucide-react";
 import aboutImage from "@/assets/about.jpg";
 
 const AboutSection = () => {
@@ -104,7 +103,7 @@ const AboutSection = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-lg text-muted-foreground leading-relaxed"
               >
-                One Canada. One Worship. One God.*
+                One Canada. One Worship. One God.
               </motion.p>
             </div>
           </motion.div>

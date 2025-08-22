@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import heroImage from "@/assets/worship-service-2.jpg";
 import logo from "@/assets/logo.png";
-import hello from "@/assets/hello.jpg";
+import heroText from "@/assets/hero-text-2.png";
 
 const HeroSection = () => {
   return (
@@ -32,7 +32,7 @@ const HeroSection = () => {
             <span>September 21, 2025</span>
           </motion.div>
 
-          <motion.h1
+          {/* <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -40,7 +40,15 @@ const HeroSection = () => {
           >
             <span className="block">One Canada</span>
             <span className="block text-gradient">One Worship</span>
-          </motion.h1>
+          </motion.h1> */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="h-64 mb-5"
+          >
+            <img src={heroText} alt="" className="h-full mx-auto" />
+          </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
