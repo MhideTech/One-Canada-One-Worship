@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Beautiful church event color palette */
+    /* #124088 0 0% 100%*/
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    /* Deep spiritual blue as primary */
+    --primary: 36 100% 60%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 243 75% 69%;
+
+    /* Warm, welcoming secondary */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 224 71% 4%;
+
+    /* Soft, muted tones */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
+
+    /* Gentle accent colors */
+    --accent: 220 14% 96%;
+    --accent-foreground: 224 71% 4%;
+
+    /* Error states */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 243 75% 59%;
+
+    --radius: 0.75rem;
+
+    /* Beautiful gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(36 100% 60%), hsl(36, 96%, 43%));
+    --gradient-hero: linear-gradient(135deg, hsl(36 100% 60%) 0%, hsl(36, 96%, 43%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 96%) 100%);
+
+    /* Elegant shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(243 75% 59% / 0.3);
+    --shadow-glow: 0 0 40px hsl(243 75% 69% / 0.4);
+    --shadow-soft: 0 4px 20px -4px hsl(220 13% 69% / 0.3);
+
+    /* Animation variables */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* Sidebar colors */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode for church website */
+    --background: 224 71% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 243 75% 69%;
+    --primary-foreground: 224 71% 4%;
+    --primary-glow: 243 75% 79%;
+
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 32% 65%;
+
+    --accent: 215 28% 17%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 243 75% 69%;
+
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(243 75% 59%), hsl(243 75% 69%));
+    --gradient-hero: linear-gradient(135deg, hsl(243 75% 59%) 0%, hsl(264 83% 69%) 50%, hsl(285 85% 75%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(224 71% 4%) 0%, hsl(215 28% 17%) 100%);
+
+    /* Dark shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(243 75% 59% / 0.5);
+    --shadow-glow: 0 0 40px hsl(243 75% 69% / 0.6);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.5);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* Custom gradient utilities */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  /* Shadow utilities */
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* Animation utilities */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-spring {
+    transition: var(--transition-spring);
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
