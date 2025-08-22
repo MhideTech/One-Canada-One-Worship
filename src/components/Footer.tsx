@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import { Heart, MapPin, Phone, Mail } from "lucide-react";
+import { Heart, MapPin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
     <footer className="bg-primary text-secondary-foreground py-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-12">
-          {/* Church Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +26,6 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -46,10 +44,7 @@ const Footer = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-secondary-foreground/60" />
-                <div className="text-sm">(555) 123-4567</div>
-              </div> */}
+              
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-secondary-foreground/60" />
                 <div className="text-sm">info@onecanadaoneworship.com</div>
@@ -57,7 +52,6 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Event Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +81,6 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -99,14 +92,6 @@ const Footer = () => {
             <p className="text-sm text-secondary-foreground/60">
               © 2025 Sacred Steps Church. All rights reserved.
             </p>
-            {/* <div className="flex gap-6 text-sm">
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                Terms of Service
-              </a>
-            </div> */}
           </div>
         </motion.div>
       </div>

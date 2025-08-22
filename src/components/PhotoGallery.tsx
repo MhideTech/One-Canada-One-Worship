@@ -110,7 +110,6 @@ const PhotoGallery = () => {
     <>
       <section className="py-24 bg-background" ref={ref}>
         <div className="mx-auto">
-          {/* Header */}
           <div className="text-center mb-16">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
@@ -132,7 +131,6 @@ const PhotoGallery = () => {
             </motion.p>
           </div>
 
-          {/* Photo Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4">
             {photos.map((photo, index) => (
               <motion.div
@@ -143,7 +141,6 @@ const PhotoGallery = () => {
                 className="group relative overflow-hidden shadow-soft cursor-pointer"
                 onClick={() => openLightbox(photo)}
               >
-                {/* Image */}
                 <div className="aspect-square overflow-hidden">
                   <img
                     src={photo.src}
@@ -152,7 +149,6 @@ const PhotoGallery = () => {
                   />
                 </div>
 
-                {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                     <h3 className="font-semibold text-lg mb-2">
@@ -161,13 +157,11 @@ const PhotoGallery = () => {
                     <p className="text-sm text-white/80">{photo.description}</p>
                   </div>
 
-                  {/* Zoom Icon */}
                   <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
                     <ZoomIn className="w-5 h-5 text-white" />
                   </div>
                 </div>
 
-                {/* Hover Glow Effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                   <div className="absolute inset-0 bg-primary/10 rounded-2xl" />
                 </div>
@@ -175,7 +169,6 @@ const PhotoGallery = () => {
             ))}
           </div>
 
-          {/* Call to Action */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -220,12 +213,10 @@ const PhotoGallery = () => {
         </div>
       </section>
 
-      {/* Lightbox Modal */}
       <Dialog open={!!selectedImage} onOpenChange={closeLightbox}>
         <DialogContent className="max-w-4xl w-full h-full max-h-screen p-0 bg-black/95 border-none">
           {selectedImage && (
             <div className="relative w-full h-full flex items-center justify-center p-4">
-              {/* Close Button */}
               <button
                 onClick={closeLightbox}
                 className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
@@ -233,7 +224,6 @@ const PhotoGallery = () => {
                 <X className="w-6 h-6" />
               </button>
 
-              {/* Image */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -247,7 +237,6 @@ const PhotoGallery = () => {
                   className="max-w-full max-h-full object-contain rounded-lg"
                 />
 
-                {/* Image Info */}
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white rounded-b-lg">
                   <h3 className="text-xl font-semibold mb-2">
                     {selectedImage.title}

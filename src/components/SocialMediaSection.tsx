@@ -45,7 +45,6 @@ const SocialMediaSection = () => {
   return (
     <section className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -66,7 +65,6 @@ const SocialMediaSection = () => {
           </motion.p>
         </div>
 
-        {/* Social Media Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {socialLinks.map((social, index) => (
             <motion.div
@@ -97,71 +95,6 @@ const SocialMediaSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Newsletter Signup */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="max-w-2xl mx-auto"
-        >
-          <div className="bg-gradient-subtle p-8 rounded-2xl border text-center">
-            <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center">
-              <Mail className="w-8 h-8 text-primary" />
-            </div>
-            
-            <h3 className="text-2xl font-heading font-semibold mb-4">
-              Join Our Newsletter
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              Get weekly inspiration, event announcements, and community highlights delivered to your inbox.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg border border-input bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium transition-colors hover:bg-primary/90 whitespace-nowrap"
-              >
-                Subscribe
-              </motion.button>
-            </div>
-            
-            <p className="text-xs text-muted-foreground mt-4">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
-          </div>
-        </motion.div> */}
-
-        {/* Social Proof */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          className="text-center mt-12"
-        >
-          <div className="flex justify-center items-center gap-8 text-muted-foreground">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-primary">2.5k+</div>
-              <div className="text-sm">Followers</div>
-            </div>
-            <div className="w-px h-8 bg-border"></div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-primary">500+</div>
-              <div className="text-sm">Community Members</div>
-            </div>
-            <div className="w-px h-8 bg-border"></div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-primary">20+</div>
-              <div className="text-sm">Years of Service</div>
-            </div>
-          </div>
-        </motion.div> */}
       </div>
     </section>
   );

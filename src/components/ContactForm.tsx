@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Send, Phone, Mail, MapPin } from "lucide-react";
+import { Send, Mail, MapPin } from "lucide-react";
 
 const ContactForm = () => {
   const ref = useRef(null);
@@ -22,12 +22,6 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const contactInfo = [
-    {
-      icon: Phone,
-      title: "Call Us",
-      detail: "(555) 123-4567",
-      subtitle: "Monday - Friday, 9:00 AM - 5:00 PM",
-    },
     {
       icon: Mail,
       title: "Email Us",
@@ -53,7 +47,6 @@ const ContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     setTimeout(() => {
       toast({
         title: "Message Sent!",
@@ -74,7 +67,6 @@ const ContactForm = () => {
   return (
     <section className="py-24 gradient-subtle" ref={ref}>
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -97,7 +89,6 @@ const ContactForm = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -113,7 +104,6 @@ const ContactForm = () => {
               </p>
             </div>
 
-            {/* Contact Details */}
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -136,7 +126,6 @@ const ContactForm = () => {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}

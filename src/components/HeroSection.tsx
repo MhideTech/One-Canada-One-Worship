@@ -9,9 +9,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <img src={logo} alt="" className="z-50 absolute top-5 w-28 left-5" />
-      {/* <img src={hello} alt="" className="z-50 absolute top-10 left-10 border" /> */}
 
-      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
@@ -22,10 +20,8 @@ const HeroSection = () => {
         <div className="absolute inset-0 gradient-hero opacity-20" />
       </div>
 
-      {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Animated Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -36,7 +32,6 @@ const HeroSection = () => {
             <span>September 21, 2025</span>
           </motion.div>
 
-          {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,7 +42,6 @@ const HeroSection = () => {
             <span className="block text-gradient">One Worship</span>
           </motion.h1>
 
-          {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -59,7 +53,6 @@ const HeroSection = () => {
             your next steps in faith.
           </motion.p>
 
-          {/* Location Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,7 +63,6 @@ const HeroSection = () => {
             <span>Toronto, Canada</span>
           </motion.div>
 
-          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -97,7 +89,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Floating Elements */}
       <motion.div
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}

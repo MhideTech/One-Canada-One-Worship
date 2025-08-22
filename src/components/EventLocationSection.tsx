@@ -39,7 +39,6 @@ const EventLocationSection = () => {
   return (
     <section className="py-24 bg-[#F4F5F6]" ref={ref}>
       <div className="container mx-auto px-4">
-        {/* Header */}
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -62,14 +61,12 @@ const EventLocationSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Map and Location Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="space-y-8"
           >
-            {/* Interactive Map Placeholder */}
             <div className="relative">
               <div className="aspect-video rounded-2xl overflow-hidden shadow-elegant border bg-muted">
                 <div className="w-full h-full bg-gradient-to-br from-primary/20 to-primary-glow/20 flex items-center justify-center">
@@ -87,7 +84,6 @@ const EventLocationSection = () => {
                 </div>
               </div>
 
-              {/* Address Card Overlay */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -108,7 +104,6 @@ const EventLocationSection = () => {
               </motion.div>
             </div>
 
-            {/* Amenities */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -127,7 +122,6 @@ const EventLocationSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Event Details */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -159,7 +153,6 @@ const EventLocationSection = () => {
               </motion.div>
             ))}
 
-            {/* Directions */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
