@@ -47,7 +47,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="h-64 mb-5"
           >
-            <img src={heroText} alt="" className="h-full mx-auto" />
+            <img src={heroText} alt="" className="w-full h-full mx-auto" />
           </motion.div>
 
           <motion.p
