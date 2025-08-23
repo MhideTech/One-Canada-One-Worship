@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
-import heroImage from "@/assets/worship-service-2.jpg";
+import heroImage from "@/assets/hero-bg.jpg";
 import logo from "@/assets/logo.png";
 import heroText from "@/assets/hero-text-2.png";
 
@@ -16,8 +16,8 @@ const HeroSection = () => {
           alt="Beautiful church interior with warm lighting"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/40" />
-        <div className="absolute inset-0 gradient-hero opacity-20" />
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/40" /> */}
+        {/* <div className="absolute inset-0 gradient-hero opacity-20" /> */}
       </div>
 
       <div className="container relative z-10 mx-auto px-4 py-20">
@@ -47,14 +47,14 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="h-64 mb-5"
           >
-            <img src={heroText} alt="" className="w-full h-full mx-auto" />
+            <img src={heroText} alt="" className="h-full mx-auto" />
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl md:text-2xl text-foreground/80 mb-8 leading-relaxed max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-white/80 mb-8 leading-relaxed max-w-3xl mx-auto"
           >
             Join us for a transformative day of worship, fellowship, and
             spiritual renewal. Experience the power of community and discover
