@@ -8,7 +8,7 @@ import heroText from "@/assets/hero-text-2.png";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <img src={logo} alt="" className="z-50 absolute top-3 w-24 left-3 md:top-5 md:w-28 md:left-5" />
+      <img src={logo} alt="" className="z-50 absolute top-2 w-20 left-2 md:top-5 md:w-28 md:left-5" />
 
       <div className="absolute inset-0 z-0">
         <img
